@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Student Record Database</title>
+    <title>Login - Liam's D&D Market</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
