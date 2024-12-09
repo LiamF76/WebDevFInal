@@ -187,6 +187,19 @@ footer {
     text-align: center;
     padding: 15px 0;
     font-size: 0.9em;
-    margin-top: 20px;
+    margin-top: auto; /* Pushes the footer to the bottom */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Add space between lines in the table */
+table td, table th {
+    padding: 10px; /* Adds space inside cells */
+    line-height: 1.8; /* Adjusts the spacing between lines */
 }

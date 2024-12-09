@@ -71,7 +71,7 @@ $stmt = $pdo->query($sql);
     <link rel="stylesheet" href="finalStyles.css">
 </head>
 <body>
-<header>
+    <header>
         <div class="logo">
             <h1>My Store</h1>
         </div>
@@ -83,13 +83,14 @@ $stmt = $pdo->query($sql);
             </ul>
         </nav>
     </header>
+    <main>
     <!-- Hero Section -->
     <div class="hero">
         <p class="hero-h2">"The more you give, the more you will receive"</p>
 
     <!-- Table section with container -->
     <div class="table-container">
-    <h1>Submit Items</h1>
+        <h1>Submit Items</h1>
         <table>
             <thead>
                 <tr>
@@ -124,10 +125,6 @@ $stmt = $pdo->query($sql);
                         </form>
                     </td>
                 </tr>
-
-    <footer>
-        <p>&copy; 2024 My Store. All rights reserved.</p>
-    </footer>
-
+    </main>
 </body>
 </html>
