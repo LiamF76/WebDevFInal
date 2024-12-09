@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <link rel="stylesheet" href="finalStyles.css">
 </head>
-<body>
+<body style ="background-color: #3b3b3b">
     <div class="auth-container">
         <h1>Login</h1>
         <?php if ($error_message): ?>
