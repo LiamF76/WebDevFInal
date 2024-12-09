@@ -101,11 +101,11 @@ $stmt = $pdo->query($sql);
             <tbody>
                 <!-- Row Example -->
                 <tr>
-                    <td>Preset Name 1</td>
+                    <td>Item 1</td>
                     <td>
                         <form action="submit_item.php" method="POST">
-                            <input type="hidden" name="name" value="Preset Name 1">
-                            <input type="number" name="number" required>
+                            <input type="hidden" name="item_name" value="Preset Name 1">
+                            <input type="float" id="price" name="price" min="0" step="0.01">
                     </td>
                     <td>
                             <button type="submit">Add to Database</button>
@@ -113,11 +113,11 @@ $stmt = $pdo->query($sql);
                     </td>
                 </tr>
                 <tr>
-                    <td>Preset Name 2</td>
+                    <td>Item 2</td>
                     <td>
                         <form action="submit_item.php" method="POST">
-                            <input type="hidden" name="name" value="Preset Name 2">
-                            <input type="number" name="number" required>
+                            <input type="hidden" name="item_name" value="Preset Name 2">
+                            <input type="price" name="price" required>
                     </td>
                     <td>
                             <button type="submit">Add to Database</button>
