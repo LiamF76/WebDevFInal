@@ -114,16 +114,16 @@ $stmt = $pdo->query($sql);
 
     <!-- Table section with container -->
     <div class="table-container">
-    <h2>Item Submission Table</h2>
+    <h2>Available Items</h2>
 
     <!-- Table for submitting predefined item name and price -->
     <table border="1">
         <thead>
             <tr>
                 <th>Item Name</th>
-                <th>Price</th>
+                <th>Name Your Price</th>
                 <th>Action</th>
-                <th>Preview Products</th>
+                <th>Product Preview</th>
             </tr>
         </thead>
         <tbody>
