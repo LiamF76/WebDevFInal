@@ -22,6 +22,15 @@ header {
     width: 100%;
     z-index: 1000; /* Ensures the navbar stays on top */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    padding: 5px 20px; /* Reduce padding for a smaller navbar */
+    text-align: center; /* Center-align navbar content */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333; /* Dark background */
+    padding: 5px 20px; /* Reduce padding for a smaller navbar */
+    text-align: center; /* Center-align navbar content */
 }
 
 .logo h1 {
@@ -61,7 +70,8 @@ header {
     background: linear-gradient(135deg, #2a2825, #443426); /* stone-like tones */
     color: #d4c7a0;
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px; /* Add padding to create space from the top */
+    margin-top: 70px; /* Creates space between the navbar and hero section */
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 

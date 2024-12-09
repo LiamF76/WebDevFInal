@@ -68,8 +68,7 @@ $stmt = $pdo->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Concord University Student Record Database</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="finalStyles.css">
 </head>
 <body>
