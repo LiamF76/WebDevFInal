@@ -92,7 +92,7 @@ $stmt = $pdo->query($sql);
             text-align: left;
         }
     </style>
-
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <header>
