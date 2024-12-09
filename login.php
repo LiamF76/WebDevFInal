@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Login - Liam's D&D Market</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="finalStyles.css">
 </head>
 <body>
     <div class="auth-container">

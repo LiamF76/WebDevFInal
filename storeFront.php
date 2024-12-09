@@ -129,7 +129,8 @@ $stmt = $pdo->query($sql);
         <tbody>
             <tr>
                 <td>
-                    <input type="text" id="item_name" name="item_name" value="Western Escarth Map" readonly>
+                    <p>Western Escarth Map</p>
+                    <input type="hidden" id="item_name" name="item_name" value="Western Escarth Map" readonly>
                 </td>
                 <td>
                     <input type="number" id="price" name="price" required>
