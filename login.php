@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Login - Liam's D&D Market</title>
 
     <link rel="stylesheet" href="finalStyles.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico.png">
 </head>
 <body style ="background-color: #3b3b3b">
     <div class="auth-container">

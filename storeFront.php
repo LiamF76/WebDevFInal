@@ -70,36 +70,14 @@ $stmt = $pdo->query($sql);
     <title>Concord University Student Record Database</title>
 
     <link rel="stylesheet" href="finalStyles.css">
-
-    <style>
-        /* Ensure the item_name input stretches to fit text */
-        #item_name {
-            width: auto; /* Allow the width to be based on content */
-            min-width: 100px; /* Minimum width */
-            max-width: 100%; /* Allow it to expand fully in the available space */
-            padding: 5px; /* Optional: Padding for appearance */
-            box-sizing: border-box; /* Include padding in the width calculation */
-            white-space: nowrap; /* Prevent text from wrapping */
-            overflow: hidden; /* Prevent text overflow */
-            text-overflow: ellipsis; /* Add ellipsis if the text is too long */
-        }
-        
-        /* Ensure the input field does not cut off text or content */
-        input[type="text"][readonly] {
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
-            font-size: 16px;
-            text-align: left;
-        }
-    </style>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico.png">
 </head>
 <body>
     <header>
         <div class="logo">
             <h1>My Store</h1>
         </div>
-        <nav class="navbar">
+        <nav class="navbar" style="background-color: #3b1e10;">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="storeFront.php">Products</a></li>
