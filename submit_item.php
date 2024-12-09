@@ -1,34 +1,22 @@
 <?php
-// Database configuration
-$servername = "localhost";
-$username = "root";
-$password = "mysql";
-$dbname = "finalproject";
+// submit_item.php - Handles the form data submission
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Check if the form was submitted via POST and contains the 'price' field
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['price'])) {
+    // Get the 'price' value from the form submission
+    $price = $_POST['price'];
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Retrieve form data
-$item_name = $_POST['item_name'];
-$price = intval($_POST['price']);
-
-// Prepare and bind SQL statement
-$stmt = $conn->prepare("INSERT INTO store (item_name, price) VALUES (?, ?)");
-$stmt->bind_param("si", $item_name, $price);
-
-// Execute the query
-if ($stmt->execute()) {
-    echo "Item added to cart successfully!";
+    // Check if the 'price' is a valid number (you can customize this as needed)
+    if (is_numeric($price) && $price > 0) {
+        // Here you can insert the price into the database or process it further.
+        // For now, we'll just return a success message.
+        echo "Price submitted successfully: " . htmlspecialchars($price);
+    } else {
+        // Return an error if the price is not valid
+        echo "Error: Please enter a valid price.";
+    }
 } else {
-    echo "Error: " . $stmt->error;
+    // Return an error if 'price' is not set or if the form was not submitted via POST
+    echo "Error: Price is required.";
 }
-
-// Close the connection
-$stmt->close();
-$conn->close();
 ?>

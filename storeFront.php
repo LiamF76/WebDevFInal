@@ -70,6 +70,29 @@ $stmt = $pdo->query($sql);
     <title>Concord University Student Record Database</title>
 
     <link rel="stylesheet" href="finalStyles.css">
+
+    <style>
+        /* Ensure the item_name input stretches to fit text */
+        #item_name {
+            width: auto; /* Allow the width to be based on content */
+            min-width: 100px; /* Minimum width */
+            max-width: 100%; /* Allow it to expand fully in the available space */
+            padding: 5px; /* Optional: Padding for appearance */
+            box-sizing: border-box; /* Include padding in the width calculation */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Prevent text overflow */
+            text-overflow: ellipsis; /* Add ellipsis if the text is too long */
+        }
+        
+        /* Ensure the input field does not cut off text or content */
+        input[type="text"][readonly] {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            text-align: left;
+        }
+    </style>
+
 </head>
 <body>
     <header>
@@ -91,41 +114,73 @@ $stmt = $pdo->query($sql);
 
     <!-- Table section with container -->
     <div class="table-container">
-        <h1>Submit Items</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Item Name</th>
-                    <th>Enter Your Price</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Row Example -->
-                <tr>
-                    <td>Item 1</td>
-                    <td>
-                        <form action="submit_item.php" method="POST">
-                            <input type="hidden" name="item_name" value="Preset Name 1">
-                            <input type="float" id="price" name="price" min="0" step="0.01">
-                    </td>
-                    <td>
-                            <button type="submit">Add to Database</button>
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Item 2</td>
-                    <td>
-                        <form action="submit_item.php" method="POST">
-                            <input type="hidden" name="item_name" value="Preset Name 2">
-                            <input type="price" name="price" required>
-                    </td>
-                    <td>
-                            <button type="submit">Add to Database</button>
-                        </form>
-                    </td>
-                </tr>
+    <h2>Item Submission Table</h2>
+
+    <!-- Table for submitting predefined item name and price -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Action</th>
+                <th>Preview Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" id="item_name" name="item_name" value="Western Escarth Map" readonly>
+                </td>
+                <td>
+                    <input type="number" id="price" name="price" required>
+                </td>
+                <td>
+                    <button id="submitBtn">Submit</button>
+                </td>
+                <td>
+                    <!-- Button to go to the product preview page -->
+                    <button id="previewBtn">Go to Products Preview</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Area to show the response after submission -->
+    <div id="response"></div>
+
+    <!-- Add jQuery (for AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // JavaScript for handling the form submission via AJAX
+        $('#submitBtn').click(function(event) {
+            event.preventDefault(); // Prevent the default form behavior (no page reload)
+
+            var itemName = $('#item_name').val(); // Get the predefined item name
+            var price = $('#price').val(); // Get the value entered in the price field
+
+            // Check if the price field is filled out
+            if (price) {
+                // AJAX request to submit the data to submit_item.php
+                $.ajax({
+                    url: 'submit_item.php',  // Path to the PHP script that will handle the submission
+                    type: 'POST',
+                    data: { item_name: itemName, price: price },  // Send item name and price to the PHP script
+                    success: function(response) {
+                        // Show the response from the PHP script (success/error message)
+                        $('#response').html(response);
+                    },
+                    error: function() {
+                        // Show an error message if the submission fails
+                        $('#response').html('Error submitting form.');
+                    }
+                });
+            } else {
+                // Show an error message if no price is entered
+                $('#response').html('Please enter a valid price.');
+            }
+        });
+    </script>
     </main>
 </body>
 </html>
