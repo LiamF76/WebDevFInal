@@ -94,8 +94,8 @@ $stmt = $pdo->query($sql);
         <table>
             <thead>
                 <tr>
-                    <th>Preset Name</th>
-                    <th>Enter Number</th>
+                    <th>Item Name</th>
+                    <th>Enter Your Price</th>
                     <th>Action</th>
                 </tr>
             </thead>

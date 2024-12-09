@@ -199,7 +199,7 @@ table {
 }
 
 /* Add space between lines in the table */
-table td, table th {
-    padding: 10px; /* Adds space inside cells */
+table td, table th, tbody {
+    padding: 50px; /* Adds space inside cells */
     line-height: 1.8; /* Adjusts the spacing between lines */
 }
