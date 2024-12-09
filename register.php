@@ -34,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <title>Register - Betty's Book Banning</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="bootstrapStyle" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
     <div class="auth-container">
