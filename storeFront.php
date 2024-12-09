@@ -68,100 +68,66 @@ $stmt = $pdo->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Concord University Student Record Database</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="finalStyles.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <h1 class="hero-title">Concord University Student Record Database</h1>
-        <p class="hero-subtitle">"Come to Learn, Go to Serve"</p>
-        
-        <!-- Search moved to hero section -->
-        <div class="hero-search">
-            <h2>Search for a Student:</h2>
-            <form action="" method="GET" class="search-form">
-                <label for="search">Search by Name:</label>
-                <input type="text" id="search" name="search" required>
-                <input type="submit" value="Search">
-            </form>
-            
-            <?php if (isset($_GET['search'])): ?>
-                <div class="search-results">
-                    <h3>Search Results</h3>
-                    <?php if ($search_results && count($search_results) > 0): ?>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($search_results as $row): ?>
-                                <tr>
-                                    <td><?php echo htmlspecialchars($row['item_id']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['item_name']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['price']); ?></td>
-                                    <td>
-                                        <form action="index5.php" method="post" style="display:inline;">
-                                            <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
-                                            <input type="submit" value="Ban!">
-                                        </form>
-                                    </td>
-                                </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    <?php else: ?>
-                        <p>No students found matching your search.</p>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
+<header>
+        <div class="logo">
+            <h1>My Store</h1>
         </div>
-    </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storeFront.php">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <div class="hero">
+        <p class="hero-h2">"The more you give, the more you will receive"</p>
 
     <!-- Table section with container -->
     <div class="table-container">
-        <h2>All Students in Database</h2>
-        <table class="half-width-left-align">
+    <h1>Submit Items</h1>
+        <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
+                    <th>Preset Name</th>
+                    <th>Enter Number</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $stmt->fetch()): ?>
+                <!-- Row Example -->
                 <tr>
-                    <td><?php echo htmlspecialchars($row['item_id']); ?></td>
-                    <td><?php echo htmlspecialchars($row['item_name']); ?></td>
-                    <td><?php echo htmlspecialchars($row['price']); ?></td>
+                    <td>Preset Name 1</td>
                     <td>
-                        <form action="index.php" method="post" style="display:inline;">
-                            <input type="hidden" name="delete_id" value="<?php echo $row['item_id']; ?>">
-                            <input type="submit" value="Drop.">
+                        <form action="submit_item.php" method="POST">
+                            <input type="hidden" name="name" value="Preset Name 1">
+                            <input type="number" name="number" required>
+                    </td>
+                    <td>
+                            <button type="submit">Add to Database</button>
                         </form>
                     </td>
                 </tr>
-                <?php endwhile; ?>
-            </tbody>
-        </table>
-    </div>
+                <tr>
+                    <td>Preset Name 2</td>
+                    <td>
+                        <form action="submit_item.php" method="POST">
+                            <input type="hidden" name="name" value="Preset Name 2">
+                            <input type="number" name="number" required>
+                    </td>
+                    <td>
+                            <button type="submit">Add to Database</button>
+                        </form>
+                    </td>
+                </tr>
 
-    <!-- Form section with container -->
-    <div class="form-container">
-        <h2>Add a Student:</h2>
-        <form action="index.php" method="post">
-            <label for="item_name">Name:</label>
-            <input type="text" id="item_name" name="item_name" required>
-            <br><br>
-            <label for="price">Year:</label>
-            <input type="float" id="price" name="price" required>
-            <br><br>
-            <input type="submit" value="Add Student">
-        </form>
-    </div>
+    <footer>
+        <p>&copy; 2024 My Store. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
