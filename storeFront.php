@@ -132,7 +132,10 @@ $stmt = $pdo->query($sql);
                 </td>
                 <td>
                     The quintessential desert fantasy world, Drok Shah is a land of mystery and danger.
-                    It houses many locations 
+                    It houses many locations to explore like the Blood Circle gladiator arena,
+                    the deadly Green Triangle desert, and the beautiful Emerald Isles.
+                    Players can enjoy an adventure through the schorching sands and explore underground
+                    cave systems filled with lost histories and treasures.
                 </td>
                 <td>
                     <input type="number" id="price" name="price" required>
