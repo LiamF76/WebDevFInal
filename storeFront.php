@@ -76,7 +76,11 @@ $stmt = $pdo->query($sql);
     <!-- Hero Section -->
     <div class="hero">
         <h1 class="hero-h1">Concord University Student Record Database</h1>
-        <p class="hero-h2">"Come to Learn, Go to Serve"</p>
+        <p class="hero-h2">
+            "I gave the kingdom everything I had, and in their stories they shall return the favor.
+            They will remember my name, as the one who wore the crown, not carried the sword.
+            Lazarus of Praetoria."
+        </p>
         
         <!-- Search moved to hero section -->
         <div class="hero-search">
