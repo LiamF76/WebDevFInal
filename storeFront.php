@@ -88,7 +88,7 @@ $stmt = $pdo->query($sql);
     <main>
     <!-- Hero Section -->
     <div class="hero">
-        <p class="hero-h2">"The more you give, the more you will receive"</p>
+        <p class="hero-h2">"I give to them not because I must, but because they deserve it. As king, what do I have that is not given to me by them? - Lazarus of Praetoria"</p>
 
     <!-- Table section with container -->
     <div class="table-container">
