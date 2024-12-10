@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register - Betty's Book Banning</title>
+    <title>Register - Daraan Games Store</title>
 
     <link rel="stylesheet" href="finalStyles.css">
     <link rel="icon" href="favicon.ico.png">

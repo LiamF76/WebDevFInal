@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Liam's D&D Market</title>
+    <title>Login - Daraan Games Store</title>
 
     <link rel="stylesheet" href="finalStyles.css">
     <link rel="icon" href="favicon.ico.png">

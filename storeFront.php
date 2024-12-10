@@ -67,7 +67,7 @@ $stmt = $pdo->query($sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Concord University Student Record Database</title>
+    <title>Daraan Games Store</title>
 
     <link rel="stylesheet" href="finalStyles.css">
     <link rel="icon" href="favicon.ico.png">
@@ -101,7 +101,6 @@ $stmt = $pdo->query($sql);
                 <th>Item Name</th>
                 <th>Name Your Price</th>
                 <th>Action</th>
-                <th>Product Preview</th>
             </tr>
         </thead>
         <tbody>
@@ -114,11 +113,19 @@ $stmt = $pdo->query($sql);
                     <input type="number" id="price" name="price" required>
                 </td>
                 <td>
-                    <button id="submitBtn">Submit</button>
+                    <button class="add-to-cart-btn" id="submitBtn">Add to Cart</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Drok Shah Map</p>
+                    <input type="hidden" id="item_name" name="item_name" value="Drok Shah Map" readonly>
                 </td>
                 <td>
-                    <!-- Button to go to the product preview page -->
-                    <button id="previewBtn">Go to Products Preview</button>
+                    <input type="number" id="price" name="price" required>
+                </td>
+                <td>
+                    <button class="add-to-cart-btn" id="submitBtn">Add to Cart</button>
                 </td>
             </tr>
         </tbody>
