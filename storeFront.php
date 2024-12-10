@@ -100,6 +100,7 @@ $stmt = $pdo->query($sql);
         <thead>
             <tr>
                 <th>Item Name</th>
+                <th>Description</th>
                 <th>Name Your Price</th>
                 <th>Action</th>
             </tr>
@@ -109,6 +110,13 @@ $stmt = $pdo->query($sql);
                 <td>
                     <p>Western Escarth Map</p>
                     <input type="hidden" id="item_name" name="item_name" value="Western Escarth Map" readonly>
+                </td>
+                <td>
+                    A fantastic map of Western Escarth, a continent ripe with adventure.
+                    From the Dwarven Kingdom of Bourn Dorhul and its vast underground treasures,
+                    to the beautiful fields and beaches of the Freehold, there is awlways somewhere to explore.
+                    But be wary of the dark kingdom of Arkonia, ruled by the rebel King Ivar the Uncrowned
+                    and his evil blade of the Abyss, Arkonil the Reckoner.
                 </td>
                 <td>
                     <input type="number" id="price" name="price" required>
@@ -121,6 +129,10 @@ $stmt = $pdo->query($sql);
                 <td>
                     <p>Drok Shah Map</p>
                     <input type="hidden" id="item_name" name="item_name" value="Drok Shah Map" readonly>
+                </td>
+                <td>
+                    The quintessential desert fantasy world, Drok Shah is a land of mystery and danger.
+                    It houses many locations 
                 </td>
                 <td>
                     <input type="number" id="price" name="price" required>
