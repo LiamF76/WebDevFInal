@@ -1,20 +1,26 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "mysql";
-$dbname = "your_database_name"; // Replace with your database name
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$host = 'localhost'; 
+$dbname = 'finalproject'; 
+$user = 'root'; 
+$pass = 'mysql';
+$charset = 'utf8mb4';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+$options = [
+    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES   => false,
+];
+
+try {
+    $pdo = new PDO($dsn, $user, $pass, $options);
+} catch (PDOException $e) {
+    throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
 // Query to fetch items from the cart
-$sql = "SELECT item_name, price FROM cart";
-$result = $conn->query($sql);
+$sql = "SELECT item_name, price FROM store";
 
 // Initialize total price
 $totalPrice = 0;
@@ -25,7 +31,7 @@ $totalPrice = 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="finalStyles.css">
 </head>
 <body>
     <div class="auth_container">
