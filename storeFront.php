@@ -93,6 +93,7 @@ $stmt = $pdo->query($sql);
     <!-- Table section with container -->
     <div class="table-container">
     <h2>Available Items</h2>
+    <li><a href="yourCart.html">Your Cart</a></li>
 
     <!-- Table for submitting predefined item name and price -->
     <table border="1">
