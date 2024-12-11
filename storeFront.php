@@ -81,52 +81,10 @@ $stmt = $pdo->query($sql);
             They will remember my name, as the one who wore the crown, not carried the sword.
             Lazarus of Praetoria."
         </p>
-        
-        <!-- Search moved to hero section -->
-        <div class="hero-search">
-            <h2>Search for a Product:</h2>
-            <form action="" method="GET" class="search-form">
-                <label for="search">Search by Name:</label>
-                <input type="text" id="search" name="search" required>
-                <input type="submit" value="Search">
-            </form>
-            
-            <?php if (isset($_GET['search'])): ?>
-                <div class="search-results">
-                    <h3>Search Results</h3>
-                    <?php if ($search_results && count($search_results) > 0): ?>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($search_results as $row): ?>
-                                <tr>
-                                    <td><?php echo htmlspecialchars($row['item_name']); ?></td>
-                                    <td><?php echo htmlspecialchars($row['price']); ?></td>
-                                    <td>
-
-                                    </td>
-                                </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    <?php else: ?>
-                        <p>No items found matching your search.</p>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
 
     <!-- Table section with container -->
-    <div class="table-container">
         <h2>All Currently Available Products</h2>
-        <table class="half-width-left-align">
+        <table class="table">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -146,6 +104,5 @@ $stmt = $pdo->query($sql);
                 <?php endwhile; ?>
             </tbody>
         </table>
-    </div>
 </body>
 </html>

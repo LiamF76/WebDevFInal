@@ -213,6 +213,11 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    font-size: 18px; /* Large text */
+    text-align: left;
+    color: #f0e6d6; /* Light cream text for readability */
+    background-color: #2c2a28; /* Dark gray background for a mystical feel */
+    border: 1px solid #70543e; /* Soft brown border */
 }
 
 /* Add space between lines in the table */
@@ -255,4 +260,46 @@ table td, table th, tbody {
     background-color: #555; /* Slightly brighter background on hover */
     transform: scale(1.05); /* Subtle zoom effect */
     color: #fff; /* Slightly brighter text on hover */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px; /* Large text */
+    text-align: left;
+    color: #f0e6d6; /* Light cream text for readability */
+    background-color: #2c2a28; /* Dark gray background for a mystical feel */
+    border: 1px solid #70543e; /* Soft brown border */
+}
+
+.table th,
+.table td {
+    padding: 15px; /* Extra padding for a spacious feel */
+    border: 1px solid #70543e; /* Same as the table border */
+}
+
+.table th {
+    background-color: #4a3f35; /* Darker shade for the header */
+    color: #d4af7a; /* Gold accent for header text */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table tr:nth-child(even) {
+    background-color: #3b3632; /* Subtle alternate row color for contrast */
+}
+
+.table tr:hover {
+    background-color: #574b44; /* Highlight row on hover */
+    cursor: pointer; /* Optional, if rows should be interactive */
+}
+
+.table a {
+    color: #d4af7a; /* Link color matching the fantasy theme */
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
 }
