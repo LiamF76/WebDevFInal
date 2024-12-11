@@ -239,8 +239,7 @@ table td, table th, tbody {
     font-family: Arial, sans-serif; /* Match the site's font */
 }
 
-/* Styled button for fantasy shop page */
-.add-to-cart-btn {
+.download-button {
     background-color: #3b3b3b; /* Dark background color */
     color: #f1f1f1; /* Light text color */
     border: 1px solid #555; /* Subtle border */
@@ -252,25 +251,8 @@ table td, table th, tbody {
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 }
 
-/* Hover effect */
-.add-to-cart-btn:hover {
+.download-button:hover {
     background-color: #555; /* Slightly brighter background on hover */
     transform: scale(1.05); /* Subtle zoom effect */
     color: #fff; /* Slightly brighter text on hover */
-}
-
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #4CAF50;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    margin: 5px;
-}
-
-.download-button:hover {
-    background-color: #45a049;
 }

@@ -106,14 +106,10 @@ $stmt = $pdo->query($sql);
                             <tbody>
                                 <?php foreach ($search_results as $row): ?>
                                 <tr>
-                                    <td><?php echo htmlspecialchars($row['item_id']); ?></td>
                                     <td><?php echo htmlspecialchars($row['item_name']); ?></td>
                                     <td><?php echo htmlspecialchars($row['price']); ?></td>
                                     <td>
-                                        <form action="index5.php" method="post" style="display:inline;">
-                                            <input type="hidden" name="delete_id" value="<?php echo $row['id']; ?>">
-                                            <input type="submit" value="Ban!">
-                                        </form>
+
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -144,7 +140,7 @@ $stmt = $pdo->query($sql);
                     <td><?php echo htmlspecialchars($row['item_name']); ?></td>
                     <td><?php echo htmlspecialchars($row['price']); ?></td>
                     <td>
-                        <a href="download.php" class="download-button">Download File</a>
+                        <a href="download.php?file=file1.txt" class="download-button">Download File 1</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>

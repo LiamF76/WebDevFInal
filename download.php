@@ -1,6 +1,6 @@
 <?php
 // Base directory for files
-$baseDir = 'C:\Program Files\Ampps\www\FinalProject';
+$baseDir = 'C:/Program Files/Ampps/www/FinalProject/';
 
 // Get the file parameter from the URL
 $fileName = isset($_GET['file']) ? basename($_GET['file']) : null;
