@@ -258,3 +258,19 @@ table td, table th, tbody {
     transform: scale(1.05); /* Subtle zoom effect */
     color: #fff; /* Slightly brighter text on hover */
 }
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+
+.download-button:hover {
+    background-color: #45a049;
+}
