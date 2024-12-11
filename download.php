@@ -1,28 +1,18 @@
 <?php
-// Base directory for files
-$baseDir = 'C:/Program Files/Ampps/www/FinalProject/';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['item_id'])) {
+    $itemId = $_POST['item_id'];
 
-// Get the file parameter from the URL
-$fileName = isset($_GET['file']) ? basename($_GET['file']) : null;
+    // Generate temporary content
+    $content = "This is a temporary file for item ID: $itemId.";
 
-// Full file path
-$filePath = $baseDir . $fileName;
+    // Set headers for download
+    header('Content-Type: text/plain');
+    header('Content-Disposition: attachment; filename="item_' . $itemId . '.txt"');
 
-// Validate the file exists and is within the base directory
-if ($fileName && file_exists($filePath) && strpos(realpath($filePath), realpath($baseDir)) === 0) {
-    // Set headers
-    header('Content-Description: File Transfer');
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename="' . basename($filePath) . '"');
-    header('Content-Length: ' . filesize($filePath));
-    header('Pragma: public');
-
-    // Clear output buffer and read file
-    ob_clean();
-    flush();
-    readfile($filePath);
+    // Output content
+    echo $content;
     exit;
 } else {
-    echo "Invalid file or file not found.";
+    echo "Invalid request.";
 }
 ?>

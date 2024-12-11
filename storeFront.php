@@ -61,6 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // Get all books for main table
 $sql = 'SELECT item_id, item_name, price FROM store';
 $stmt = $pdo->query($sql);
+
+// Fetch items as an associative array
+$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -93,15 +96,24 @@ $stmt = $pdo->query($sql);
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $stmt->fetch()): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($row['item_name']); ?></td>
-                    <td><?php echo htmlspecialchars($row['price']); ?></td>
-                    <td>
-                        <a href="download.php?file=file1.txt" class="download-button">Download File 1</a>
-                    </td>
-                </tr>
-                <?php endwhile; ?>
+                <?php if (count($items) > 0): ?>
+                    <?php foreach ($items as $item): ?>
+                        <tr>
+                            <td><?php echo htmlspecialchars($item['name']); ?></td>
+                            <td><?php echo htmlspecialchars($item['price']); ?></td>
+                            <td>
+                                <form action="download.php" method="post">
+                                    <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>">
+                                    <button type="submit" class="download-button">Download</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="3">No items found.</td>
+                    </tr>
+                <?php endif; ?>
             </tbody>
         </table>
 </body>
