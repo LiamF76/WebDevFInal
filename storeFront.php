@@ -133,7 +133,6 @@ $stmt = $pdo->query($sql);
         <table class="half-width-left-align">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Price</th>
                     <th>Actions</th>
@@ -142,14 +141,10 @@ $stmt = $pdo->query($sql);
             <tbody>
                 <?php while ($row = $stmt->fetch()): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($row['item_id']); ?></td>
                     <td><?php echo htmlspecialchars($row['item_name']); ?></td>
                     <td><?php echo htmlspecialchars($row['price']); ?></td>
                     <td>
-                        <form action="storeFront.php" method="post" style="display:inline;">
-                            <input type="hidden" name="delete_id" value="<?php echo $row['item_id']; ?>">
-                            <input type="submit" value="Drop.">
-                        </form>
+                        <a href="download.php" class="download-button">Download File</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>
