@@ -75,7 +75,7 @@ $stmt = $pdo->query($sql);
 <body>
     <!-- Hero Section -->
     <div class="hero">
-        <h1 class="hero-h1">Concord University Student Record Database</h1>
+        <h1 class="hero-h1">Daraan Games Storefront</h1>
         <p class="hero-h2">
             "I gave the kingdom everything I had, and in their stories they shall return the favor.
             They will remember my name, as the one who wore the crown, not carried the sword.
@@ -84,7 +84,7 @@ $stmt = $pdo->query($sql);
         
         <!-- Search moved to hero section -->
         <div class="hero-search">
-            <h2>Search for a Student:</h2>
+            <h2>Search for a Product:</h2>
             <form action="" method="GET" class="search-form">
                 <label for="search">Search by Name:</label>
                 <input type="text" id="search" name="search" required>
@@ -98,7 +98,6 @@ $stmt = $pdo->query($sql);
                         <table>
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Name</th>
                                     <th>Price</th>
                                     <th>Actions</th>
@@ -121,7 +120,7 @@ $stmt = $pdo->query($sql);
                             </tbody>
                         </table>
                     <?php else: ?>
-                        <p>No students found matching your search.</p>
+                        <p>No items found matching your search.</p>
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
@@ -130,7 +129,7 @@ $stmt = $pdo->query($sql);
 
     <!-- Table section with container -->
     <div class="table-container">
-        <h2>All Students in Database</h2>
+        <h2>All Currently Available Products</h2>
         <table class="half-width-left-align">
             <thead>
                 <tr>
@@ -156,20 +155,6 @@ $stmt = $pdo->query($sql);
                 <?php endwhile; ?>
             </tbody>
         </table>
-    </div>
-
-    <!-- Form section with container -->
-    <div class="form-container">
-        <h2>Add a Student:</h2>
-        <form action="storeFront.php" method="post">
-            <label for="item_name">Name:</label>
-            <input type="text" id="item_name" name="item_name" required>
-            <br><br>
-            <label for="price">PRice:</label>
-            <input type="text" id="price" name="price" required>
-            <br><br>
-            <input type="submit" value="Add Student">
-        </form>
     </div>
 </body>
 </html>
