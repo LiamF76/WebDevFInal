@@ -76,6 +76,18 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="icon" href="favicon.ico.png">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>Daraan Games</h1>
+        </div>
+        <nav class="navbar" style="background-color: #3b1e10;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storeFront.php">Products</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- Hero Section -->
     <div class="hero">
         <h1 class="hero-h1">Daraan Games Storefront</h1>
@@ -91,7 +103,6 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Price</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -99,8 +110,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php if (count($items) > 0): ?>
                     <?php foreach ($items as $item): ?>
                         <tr>
-                            <td><?php echo htmlspecialchars($item['name']); ?></td>
-                            <td><?php echo htmlspecialchars($item['price']); ?></td>
+                            <td><?php echo htmlspecialchars($item['item_name']); ?></td>
                             <td>
                                 <form action="download.php" method="post">
                                     <input type="hidden" name="item_id" value="<?php echo $item['item_id']; ?>">
@@ -116,5 +126,8 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endif; ?>
             </tbody>
         </table>
+    <footer>
+        <p>&copy; 2024 My Store. All rights reserved.</p>
+    </footer>
 </body>
 </html>
