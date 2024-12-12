@@ -30,7 +30,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="finalStyles.css">
     <link rel="icon" href="favicon.ico.png">
 </head>
+
 <body style ="background-color: #3b3b3b">
+<header>
+        <div class="logo">
+            <h1>My Store</h1>
+        </div>
+        <nav class="navbar" style="background-color: #3b1e10;">
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="storeFront.php">🛒 Products</a></li>
+                <li><a href="aboutUs.html">ℹ️ About</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="auth-container">
         <h1>Login</h1>
         <?php if ($error_message): ?>

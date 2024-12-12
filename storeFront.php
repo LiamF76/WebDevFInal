@@ -82,9 +82,9 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <nav class="navbar" style="background-color: #3b1e10;">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="storeFront.php">Products</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="storeFront.php">🛒 Products</a></li>
+                <li><a href="aboutUs.html">ℹ️ About</a></li>
             </ul>
         </nav>
     </header>
