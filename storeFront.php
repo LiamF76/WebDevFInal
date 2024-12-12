@@ -128,6 +128,9 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </table>
     <footer>
         <p>&copy; 2024 My Store. All rights reserved.</p>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="admin_page.php" class="button">Go to Admin Page</a>
+        </div>  
     </footer>
 </body>
 </html>

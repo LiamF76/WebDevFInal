@@ -39,11 +39,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrator Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Daraan Games Store</title>
+
+    <link rel="stylesheet" href="finalStyles.css">
+    <link rel="icon" href="favicon.ico.png">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <h1>Daraan Games</h1>
+        </div>
+        <nav class="navbar" style="background-color: #3b1e10;">
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="storeFront.php">🛒 Products</a></li>
+                <li><a href="aboutUs.html">ℹ️ About</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="auth-container">
         <h1>Add New Item</h1>
         <form method="POST" action="admin_page.php">

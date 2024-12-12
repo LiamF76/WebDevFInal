@@ -303,3 +303,19 @@ table td, table th, tbody {
 .table a:hover {
     text-decoration: underline;
 }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50; /* Customize color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker hover effect */
+}
